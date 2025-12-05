@@ -1,7 +1,4 @@
-module "tfplan-functions" {
-    source = "./tfplan-functions.sentinel"
-}
-policy "restrict-vm-size" {
-    source = "./Azure_VMs_Size.sentinel"
-    enforcement_level = "advisory"
+policy "restrict-azure-secrets" {
+    source = "./restrict-azure-secrets.sentinel"
+    enforcement_level = "hard-mandatory"
 }
